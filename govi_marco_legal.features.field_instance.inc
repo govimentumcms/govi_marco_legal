@@ -48,7 +48,44 @@ function govi_marco_legal_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 8,
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-marco_legal-field_legal_clasificacion'.
+  $field_instances['node-marco_legal-field_legal_clasificacion'] = array(
+    'bundle' => 'marco_legal',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_legal_clasificacion',
+    'label' => 'Clasificación del marco legal',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 6,
     ),
   );
 
@@ -146,7 +183,7 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -205,6 +242,43 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
     ),
   );
 
+  // Exported field_instance: 'node-marco_legal-field_legal_lineamientos'.
+  $field_instances['node-marco_legal-field_legal_lineamientos'] = array(
+    'bundle' => 'marco_legal',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_legal_lineamientos',
+    'label' => 'Tipos de lineamientos',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-marco_legal-field_legal_lugar_expedicion'.
   $field_instances['node-marco_legal-field_legal_lugar_expedicion'] = array(
     'bundle' => 'marco_legal',
@@ -241,7 +315,44 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-marco_legal-field_legal_normatividad'.
+  $field_instances['node-marco_legal-field_legal_normatividad'] = array(
+    'bundle' => 'marco_legal',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_legal_normatividad',
+    'label' => 'Tipos de normatividad',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 7,
     ),
   );
 
@@ -250,7 +361,7 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
     'bundle' => 'marco_legal',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'indique el número oficial que permite la consulta de la norma.<br/>
+    'description' => 'Indique el número oficial que permite la consulta de la norma.<br/>
 Una fuente oficial de normas distritales puede ser consultada en la Plataforma del Régimen Legal de la Alcaldía Mayor de Bogota <a href="http://www.alcaldiabogota.gov.co/sisjur/index.jsp" target="_blank">Sisjur</a>',
     'display' => array(
       'default' => array(
@@ -269,7 +380,7 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
     ),
     'entity_type' => 'node',
     'field_name' => 'field_legal_numero',
-    'label' => 'Numero de la norma',
+    'label' => 'Número de la norma',
     'required' => 1,
     'settings' => array(
       'text_processing' => 0,
@@ -283,6 +394,43 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
       ),
       'type' => 'text_textfield',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-marco_legal-field_legal_planes'.
+  $field_instances['node-marco_legal-field_legal_planes'] = array(
+    'bundle' => 'marco_legal',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_legal_planes',
+    'label' => 'Tipos de planes',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 10,
     ),
   );
 
@@ -323,44 +471,7 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-marco_legal-field_legal_tipo'.
-  $field_instances['node-marco_legal-field_legal_tipo'] = array(
-    'bundle' => 'marco_legal',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'indique el tipo de norma al que pertenece el documento o enlace asociado',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_legal_tipo',
-    'label' => 'Tipo de norma',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 7,
     ),
   );
 
@@ -368,18 +479,20 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
   // Included for use with string extractors like potx.
   t('Archivo adjunto');
   t('Breve descripción o resumen sobre la norma ');
+  t('Clasificación del marco legal');
   t('Descripción');
   t('Enlace');
   t('Entidad que expide la norma');
   t('Fecha de expedición de la norma');
   t('Gestione un archivo adjunto si la norma o documento no tiene referencia en el Sistema de Información del Régimen Legal <a href="http://172.16.101.193:8081/sisjur/index.jsp" target="_blank">Sisjur</a>');
-  t('Numero de la norma');
-  t('Palabras clave indicando la entidad lugar u organización que expide la norma');
-  t('Tipo de norma');
-  t('Tipo de recurso');
-  t('indique el número oficial que permite la consulta de la norma.<br/>
+  t('Indique el número oficial que permite la consulta de la norma.<br/>
 Una fuente oficial de normas distritales puede ser consultada en la Plataforma del Régimen Legal de la Alcaldía Mayor de Bogota <a href="http://www.alcaldiabogota.gov.co/sisjur/index.jsp" target="_blank">Sisjur</a>');
-  t('indique el tipo de norma al que pertenece el documento o enlace asociado');
+  t('Número de la norma');
+  t('Palabras clave indicando la entidad lugar u organización que expide la norma');
+  t('Tipo de recurso');
+  t('Tipos de lineamientos');
+  t('Tipos de normatividad');
+  t('Tipos de planes');
   t('indique la fecha oficial de publicación de la norma');
   t('indique la url donde el usuario puede acceder o descargar la norma.<br/>
 Una fuente oficial de normas distritales puede ser consultada en la Plataforma del Régimen Legal de la Alcaldía Mayor de Bogota <a href="http://www.alcaldiabogota.gov.co/sisjur/index.jsp" target="_blank">Sisjur</a>');

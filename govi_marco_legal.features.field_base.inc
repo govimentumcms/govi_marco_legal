@@ -33,6 +33,32 @@ function govi_marco_legal_field_default_field_bases() {
     'type' => 'file',
   );
 
+  // Exported field_base: 'field_legal_clasificacion'.
+  $field_bases['field_legal_clasificacion'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_legal_clasificacion',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'marco_legal_clasificacion',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_legal_descripcion'.
   $field_bases['field_legal_descripcion'] = array(
     'active' => 1,
@@ -110,6 +136,32 @@ function govi_marco_legal_field_default_field_bases() {
     'type' => 'datetime',
   );
 
+  // Exported field_base: 'field_legal_lineamientos'.
+  $field_bases['field_legal_lineamientos'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_legal_lineamientos',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'marco_legal_lineamientos',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_legal_lugar_expedicion'.
   $field_bases['field_legal_lugar_expedicion'] = array(
     'active' => 1,
@@ -128,6 +180,32 @@ function govi_marco_legal_field_default_field_bases() {
       'allowed_values' => array(
         0 => array(
           'vocabulary' => 'marco_legal_lugares_expedicion',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_legal_normatividad'.
+  $field_bases['field_legal_normatividad'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_legal_normatividad',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'marco_legal_normatividad',
           'parent' => 0,
         ),
       ),
@@ -157,6 +235,32 @@ function govi_marco_legal_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_legal_planes'.
+  $field_bases['field_legal_planes'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_legal_planes',
+    'indexes' => array(
+      'tid' => array(
+        0 => 'tid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'taxonomy',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => array(
+          'vocabulary' => 'marco_legal_planes',
+          'parent' => 0,
+        ),
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'taxonomy_term_reference',
+  );
+
   // Exported field_base: 'field_legal_recurso'.
   $field_bases['field_legal_recurso'] = array(
     'active' => 1,
@@ -180,32 +284,6 @@ function govi_marco_legal_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_legal_tipo'.
-  $field_bases['field_legal_tipo'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_legal_tipo',
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'normatividad_tipos',
-          'parent' => 0,
-        ),
-      ),
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
   );
 
   return $field_bases;
