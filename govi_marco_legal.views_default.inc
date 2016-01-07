@@ -33,7 +33,7 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_legal_expedicion',
+      'field' => 'field_legal_normatividad',
       'rendered' => 1,
       'rendered_strip' => 0,
     ),
@@ -47,18 +47,6 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Archivo adjunto */
-  $handler->display->display_options['fields']['field_legal_adjunto']['id'] = 'field_legal_adjunto';
-  $handler->display->display_options['fields']['field_legal_adjunto']['table'] = 'field_data_field_legal_adjunto';
-  $handler->display->display_options['fields']['field_legal_adjunto']['field'] = 'field_legal_adjunto';
-  $handler->display->display_options['fields']['field_legal_adjunto']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_legal_adjunto']['click_sort_column'] = 'fid';
-  /* Field: Content: Clasificación del marco legal */
-  $handler->display->display_options['fields']['field_legal_clasificacion']['id'] = 'field_legal_clasificacion';
-  $handler->display->display_options['fields']['field_legal_clasificacion']['table'] = 'field_data_field_legal_clasificacion';
-  $handler->display->display_options['fields']['field_legal_clasificacion']['field'] = 'field_legal_clasificacion';
-  $handler->display->display_options['fields']['field_legal_clasificacion']['label'] = 'Clasificación';
-  $handler->display->display_options['fields']['field_legal_clasificacion']['element_label_colon'] = FALSE;
   /* Field: Content: Descripción */
   $handler->display->display_options['fields']['field_legal_descripcion']['id'] = 'field_legal_descripcion';
   $handler->display->display_options['fields']['field_legal_descripcion']['table'] = 'field_data_field_legal_descripcion';
@@ -70,15 +58,31 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_enlace']['field'] = 'field_legal_enlace';
   $handler->display->display_options['fields']['field_legal_enlace']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_legal_enlace']['click_sort_column'] = 'url';
+  /* Field: Content: Archivo adjunto */
+  $handler->display->display_options['fields']['field_legal_adjunto']['id'] = 'field_legal_adjunto';
+  $handler->display->display_options['fields']['field_legal_adjunto']['table'] = 'field_data_field_legal_adjunto';
+  $handler->display->display_options['fields']['field_legal_adjunto']['field'] = 'field_legal_adjunto';
+  $handler->display->display_options['fields']['field_legal_adjunto']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_legal_adjunto']['click_sort_column'] = 'fid';
+  /* Field: Content: Clasificación del marco legal */
+  $handler->display->display_options['fields']['field_legal_clasificacion']['id'] = 'field_legal_clasificacion';
+  $handler->display->display_options['fields']['field_legal_clasificacion']['table'] = 'field_data_field_legal_clasificacion';
+  $handler->display->display_options['fields']['field_legal_clasificacion']['field'] = 'field_legal_clasificacion';
+  $handler->display->display_options['fields']['field_legal_clasificacion']['label'] = 'Clasificación';
+  $handler->display->display_options['fields']['field_legal_clasificacion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_clasificacion']['element_label_colon'] = FALSE;
   /* Field: Content: Entidad que expide la norma */
   $handler->display->display_options['fields']['field_legal_lugar_expedicion']['id'] = 'field_legal_lugar_expedicion';
   $handler->display->display_options['fields']['field_legal_lugar_expedicion']['table'] = 'field_data_field_legal_lugar_expedicion';
   $handler->display->display_options['fields']['field_legal_lugar_expedicion']['field'] = 'field_legal_lugar_expedicion';
+  $handler->display->display_options['fields']['field_legal_lugar_expedicion']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_lugar_expedicion']['element_label_colon'] = FALSE;
   /* Field: Content: Fecha de expedición de la norma */
   $handler->display->display_options['fields']['field_legal_expedicion']['id'] = 'field_legal_expedicion';
   $handler->display->display_options['fields']['field_legal_expedicion']['table'] = 'field_data_field_legal_expedicion';
   $handler->display->display_options['fields']['field_legal_expedicion']['field'] = 'field_legal_expedicion';
   $handler->display->display_options['fields']['field_legal_expedicion']['label'] = '';
+  $handler->display->display_options['fields']['field_legal_expedicion']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_legal_expedicion']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_legal_expedicion']['settings'] = array(
     'format_type' => 'anho',
@@ -92,11 +96,14 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_recurso']['id'] = 'field_legal_recurso';
   $handler->display->display_options['fields']['field_legal_recurso']['table'] = 'field_data_field_legal_recurso';
   $handler->display->display_options['fields']['field_legal_recurso']['field'] = 'field_legal_recurso';
+  $handler->display->display_options['fields']['field_legal_recurso']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_legal_recurso']['element_label_colon'] = FALSE;
   /* Field: Content: Tipos de normatividad */
   $handler->display->display_options['fields']['field_legal_normatividad']['id'] = 'field_legal_normatividad';
   $handler->display->display_options['fields']['field_legal_normatividad']['table'] = 'field_data_field_legal_normatividad';
   $handler->display->display_options['fields']['field_legal_normatividad']['field'] = 'field_legal_normatividad';
+  $handler->display->display_options['fields']['field_legal_normatividad']['label'] = '';
+  $handler->display->display_options['fields']['field_legal_normatividad']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_legal_normatividad']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
@@ -141,13 +148,12 @@ function govi_marco_legal_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Nombre'),
-    t('Archivo adjunto'),
-    t('Clasificación'),
     t('Descripción'),
     t('Enlace'),
+    t('Archivo adjunto'),
+    t('Clasificación'),
     t('Entidad que expide la norma'),
     t('Tipo de recurso'),
-    t('Tipos de normatividad'),
     t('Page'),
   );
   $export['marco_legal_normatividad'] = $view;
