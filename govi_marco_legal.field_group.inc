@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function govi_marco_legal_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -39,7 +39,7 @@ function govi_marco_legal_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_legal_clasificacion|node|marco_legal|form'] = $field_group;
+  $field_groups['group_legal_clasificacion|node|marco_legal|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -71,7 +71,7 @@ function govi_marco_legal_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_legal_info_basica|node|marco_legal|form'] = $field_group;
+  $field_groups['group_legal_info_basica|node|marco_legal|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -100,7 +100,13 @@ function govi_marco_legal_field_group_info() {
       ),
     ),
   );
-  $export['group_legal_recurso|node|marco_legal|form'] = $field_group;
+  $field_groups['group_legal_recurso|node|marco_legal|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Clasificación');
+  t('Información Básica');
+  t('Recurso');
+
+  return $field_groups;
 }

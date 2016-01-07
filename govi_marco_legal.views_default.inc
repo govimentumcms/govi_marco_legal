@@ -137,7 +137,7 @@ function govi_marco_legal_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'normatividad';
+  $handler->display->display_options['path'] = 'marco-legal/normatividad';
   $translatables['marco_legal_normatividad'] = array(
     t('Master'),
     t('Marco Legal Normatividad'),
