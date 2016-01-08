@@ -22,7 +22,7 @@ function govi_marco_legal_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Marco Legal Lineamientos';
+  $handler->display->display_options['title'] = 'Marco Legal Planes';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -147,10 +147,11 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
+  /* Display: Normatividad */
+  $handler = $view->new_display('page', 'Normatividad', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Marco Legal Normatividad';
+  $handler->display->display_options['display_description'] = 'Clasificación de los documentos normativos del marco legal ';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -179,8 +180,11 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
   $handler->display->display_options['path'] = 'marco-legal/normatividad';
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_1');
+  /* Display: Lineamientos */
+  $handler = $view->new_display('page', 'Lineamientos', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Marco Legal Lineamientos';
+  $handler->display->display_options['display_description'] = 'Clasificación de los documentos que definen lineamientos del marco legal';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['grouping'] = array(
@@ -195,9 +199,55 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'marco-legal/lineamientos';
+
+  /* Display: Planes */
+  $handler = $view->new_display('page', 'Planes', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Marco Legal Planes';
+  $handler->display->display_options['display_description'] = 'Clasificación de los documentos que definen planes del marco legal de la entidad';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_legal_planes',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'marco_legal' => 'marco_legal',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    16 => '16',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
+  $handler->display->display_options['path'] = 'marco-legal/planes';
   $translatables['marco_legal'] = array(
     t('Master'),
-    t('Marco Legal Lineamientos'),
+    t('Marco Legal Planes'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -211,8 +261,14 @@ function govi_marco_legal_views_default_views() {
     t('Clasificación'),
     t('Entidad que expide la norma'),
     t('Tipo de recurso'),
-    t('Page'),
+    t('Normatividad'),
     t('Marco Legal Normatividad'),
+    t('Clasificación de los documentos normativos del marco legal '),
+    t('Lineamientos'),
+    t('Marco Legal Lineamientos'),
+    t('Clasificación de los documentos que definen lineamientos del marco legal'),
+    t('Planes'),
+    t('Clasificación de los documentos que definen planes del marco legal de la entidad'),
   );
   $export['marco_legal'] = $view;
 
