@@ -11,18 +11,18 @@ function govi_marco_legal_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'marco_legal_normatividad';
+  $view->name = 'marco_legal';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Marco Legal Normatividad';
+  $view->human_name = 'Marco Legal';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Marco Legal Normatividad';
+  $handler->display->display_options['title'] = 'Marco Legal Lineamientos';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -105,6 +105,18 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_normatividad']['label'] = '';
   $handler->display->display_options['fields']['field_legal_normatividad']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_legal_normatividad']['element_label_colon'] = FALSE;
+  /* Field: Content: Tipos de lineamientos */
+  $handler->display->display_options['fields']['field_legal_lineamientos']['id'] = 'field_legal_lineamientos';
+  $handler->display->display_options['fields']['field_legal_lineamientos']['table'] = 'field_data_field_legal_lineamientos';
+  $handler->display->display_options['fields']['field_legal_lineamientos']['field'] = 'field_legal_lineamientos';
+  $handler->display->display_options['fields']['field_legal_lineamientos']['label'] = '';
+  $handler->display->display_options['fields']['field_legal_lineamientos']['element_label_colon'] = FALSE;
+  /* Field: Content: Tipos de planes */
+  $handler->display->display_options['fields']['field_legal_planes']['id'] = 'field_legal_planes';
+  $handler->display->display_options['fields']['field_legal_planes']['table'] = 'field_data_field_legal_planes';
+  $handler->display->display_options['fields']['field_legal_planes']['field'] = 'field_legal_planes';
+  $handler->display->display_options['fields']['field_legal_planes']['label'] = '';
+  $handler->display->display_options['fields']['field_legal_planes']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -130,17 +142,62 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
   $handler->display->display_options['filters']['tid']['value'] = array(
-    14 => '14',
+    15 => '15',
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Marco Legal Normatividad';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'marco_legal' => 'marco_legal',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    14 => '14',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
   $handler->display->display_options['path'] = 'marco-legal/normatividad';
-  $translatables['marco_legal_normatividad'] = array(
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_legal_lineamientos',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['path'] = 'marco-legal/lineamientos';
+  $translatables['marco_legal'] = array(
     t('Master'),
-    t('Marco Legal Normatividad'),
+    t('Marco Legal Lineamientos'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -155,8 +212,9 @@ function govi_marco_legal_views_default_views() {
     t('Entidad que expide la norma'),
     t('Tipo de recurso'),
     t('Page'),
+    t('Marco Legal Normatividad'),
   );
-  $export['marco_legal_normatividad'] = $view;
+  $export['marco_legal'] = $view;
 
   return $export;
 }

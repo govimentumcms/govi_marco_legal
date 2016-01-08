@@ -50,5 +50,5 @@ features[taxonomy][] = marco_legal_lineamientos
 features[taxonomy][] = marco_legal_lugares_expedicion
 features[taxonomy][] = marco_legal_normatividad
 features[taxonomy][] = marco_legal_planes
-features[views_view][] = marco_legal_normatividad
+features[views_view][] = marco_legal
 project path = sites/all/modules/features
