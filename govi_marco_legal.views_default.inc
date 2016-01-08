@@ -110,6 +110,7 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_lineamientos']['table'] = 'field_data_field_legal_lineamientos';
   $handler->display->display_options['fields']['field_legal_lineamientos']['field'] = 'field_legal_lineamientos';
   $handler->display->display_options['fields']['field_legal_lineamientos']['label'] = '';
+  $handler->display->display_options['fields']['field_legal_lineamientos']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_legal_lineamientos']['element_label_colon'] = FALSE;
   /* Field: Content: Tipos de planes */
   $handler->display->display_options['fields']['field_legal_planes']['id'] = 'field_legal_planes';
