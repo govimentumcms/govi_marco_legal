@@ -51,7 +51,13 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_descripcion']['id'] = 'field_legal_descripcion';
   $handler->display->display_options['fields']['field_legal_descripcion']['table'] = 'field_data_field_legal_descripcion';
   $handler->display->display_options['fields']['field_legal_descripcion']['field'] = 'field_legal_descripcion';
+  $handler->display->display_options['fields']['field_legal_descripcion']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_descripcion']['alter']['max_length'] = '150';
+  $handler->display->display_options['fields']['field_legal_descripcion']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['field_legal_descripcion']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_legal_descripcion']['settings'] = array(
+    'trim_length' => '200',
+  );
   /* Field: Content: Enlace */
   $handler->display->display_options['fields']['field_legal_enlace']['id'] = 'field_legal_enlace';
   $handler->display->display_options['fields']['field_legal_enlace']['table'] = 'field_data_field_legal_enlace';
