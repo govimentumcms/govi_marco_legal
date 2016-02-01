@@ -24,8 +24,8 @@ function govi_marco_legal_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_legal_clasificacion',
-      1 => 'field_legal_normatividad',
-      2 => 'field_legal_lineamientos',
+      1 => 'field_legal_lineamientos',
+      2 => 'field_legal_normatividad',
       3 => 'field_legal_planes',
     ),
     'format_type' => 'fieldset',
@@ -55,8 +55,8 @@ function govi_marco_legal_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_legal_descripcion',
-      1 => 'field_legal_lugar_expedicion',
-      2 => 'field_legal_expedicion',
+      1 => 'field_legal_expedicion',
+      2 => 'field_legal_lugar_expedicion',
       3 => 'field_legal_numero',
       4 => 'title',
     ),
@@ -86,8 +86,8 @@ function govi_marco_legal_field_group_info() {
     'label' => 'Recurso',
     'weight' => '7',
     'children' => array(
-      0 => 'field_legal_enlace',
-      1 => 'field_legal_adjunto',
+      0 => 'field_legal_adjunto',
+      1 => 'field_legal_enlace',
       2 => 'field_legal_recurso',
     ),
     'format_type' => 'fieldset',

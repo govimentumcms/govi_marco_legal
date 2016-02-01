@@ -30,6 +30,18 @@ function govi_marco_legal_context_default_contexts() {
         'marco-legal/*' => 'marco-legal/*',
       ),
     ),
+    'taxonomy_term' => array(
+      'values' => array(
+        'marco_legal_clasificacion' => 'marco_legal_clasificacion',
+        'marco_legal_lineamientos' => 'marco_legal_lineamientos',
+        'marco_legal_lugares_expedicion' => 'marco_legal_lugares_expedicion',
+        'marco_legal_normatividad' => 'marco_legal_normatividad',
+        'marco_legal_planes' => 'marco_legal_planes',
+      ),
+      'options' => array(
+        'term_form' => '1',
+      ),
+    ),
   );
   $context->reactions = array(
     'block' => array(
