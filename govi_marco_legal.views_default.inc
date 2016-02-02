@@ -39,6 +39,10 @@ function govi_marco_legal_views_default_views() {
     ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -159,6 +163,15 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Marco Legal Normatividad';
   $handler->display->display_options['display_description'] = 'Clasificación de los documentos normativos del marco legal ';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
+
+En estra sección podrá encontrar la siguiene clasificación de <i>normatividad</i>: Acuerdos distritales, Decretos, Directivas, Jurisprudencia, Leyes, Normas constitucionales, Resoluciones y Tratados internacionales.';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -205,6 +218,15 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
+
+En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos</i>: Actas, Circulares, Conceptos.';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['path'] = 'marco-legal/lineamientos';
 
   /* Display: Planes */
@@ -225,6 +247,15 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
+
+En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: Planes de desarrollo, Proyectos de inversión';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -271,11 +302,20 @@ function govi_marco_legal_views_default_views() {
     t('Normatividad'),
     t('Marco Legal Normatividad'),
     t('Clasificación de los documentos normativos del marco legal '),
+    t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
+
+En estra sección podrá encontrar la siguiene clasificación de <i>normatividad</i>: Acuerdos distritales, Decretos, Directivas, Jurisprudencia, Leyes, Normas constitucionales, Resoluciones y Tratados internacionales.'),
     t('Lineamientos'),
     t('Marco Legal Lineamientos'),
     t('Clasificación de los documentos que definen lineamientos del marco legal'),
+    t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
+
+En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos</i>: Actas, Circulares, Conceptos.'),
     t('Planes'),
     t('Clasificación de los documentos que definen planes del marco legal de la entidad'),
+    t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
+
+En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: Planes de desarrollo, Proyectos de inversión'),
   );
   $export['marco_legal'] = $view;
 
