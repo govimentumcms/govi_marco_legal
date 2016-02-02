@@ -38,7 +38,7 @@ function govi_marco_legal_field_default_field_instances() {
       'description_field' => 0,
       'file_directory' => 'marco-legal',
       'file_extensions' => 'pdf',
-      'max_filesize' => '10 MB',
+      'max_filesize' => '50 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
