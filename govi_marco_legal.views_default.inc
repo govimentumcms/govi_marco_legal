@@ -66,14 +66,31 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_enlace']['id'] = 'field_legal_enlace';
   $handler->display->display_options['fields']['field_legal_enlace']['table'] = 'field_data_field_legal_enlace';
   $handler->display->display_options['fields']['field_legal_enlace']['field'] = 'field_legal_enlace';
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['text'] = 'Ir al documento';
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['path'] = '[field_legal_enlace-url]';
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['alt'] = 'Ir a la localización del documento';
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['link_class'] = 'pure-button';
+  $handler->display->display_options['fields']['field_legal_enlace']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_legal_enlace']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_legal_enlace']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_legal_enlace']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_legal_enlace']['type'] = 'link_plain';
   /* Field: Content: Archivo adjunto */
   $handler->display->display_options['fields']['field_legal_adjunto']['id'] = 'field_legal_adjunto';
   $handler->display->display_options['fields']['field_legal_adjunto']['table'] = 'field_data_field_legal_adjunto';
   $handler->display->display_options['fields']['field_legal_adjunto']['field'] = 'field_legal_adjunto';
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['text'] = 'Descargar documento';
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['path'] = '[field_legal_adjunto]';
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['alt'] = 'Descargar documento';
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['link_class'] = 'pure-button';
   $handler->display->display_options['fields']['field_legal_adjunto']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_legal_adjunto']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_legal_adjunto']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_legal_adjunto']['type'] = 'file_url_plain';
   /* Field: Content: Clasificación del marco legal */
   $handler->display->display_options['fields']['field_legal_clasificacion']['id'] = 'field_legal_clasificacion';
   $handler->display->display_options['fields']['field_legal_clasificacion']['table'] = 'field_data_field_legal_clasificacion';
@@ -295,7 +312,10 @@ En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: 
     t('Nombre'),
     t('Descripción'),
     t('Enlace'),
+    t('Ir al documento'),
+    t('Ir a la localización del documento'),
     t('Archivo adjunto'),
+    t('Descargar documento'),
     t('Clasificación'),
     t('Entidad que expide la norma'),
     t('Tipo de recurso'),
