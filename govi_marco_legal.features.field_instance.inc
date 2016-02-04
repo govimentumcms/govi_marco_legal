@@ -113,7 +113,7 @@ function govi_marco_legal_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_legal_descripcion',
     'label' => 'Descripción',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 1,
       'user_register_form' => FALSE,
