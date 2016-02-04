@@ -33,7 +33,7 @@ function govi_marco_legal_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_legal_adjunto',
     'label' => 'Archivo adjunto',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'marco-legal',
@@ -462,7 +462,7 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
     'entity_type' => 'node',
     'field_name' => 'field_legal_recurso',
     'label' => 'Tipo de recurso',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
