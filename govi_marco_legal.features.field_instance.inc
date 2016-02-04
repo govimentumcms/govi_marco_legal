@@ -235,7 +235,7 @@ Una fuente oficial de normas distritales puede ser consultada en la Plataforma d
         'label_position' => 'above',
         'no_fieldset' => 0,
         'text_parts' => array(),
-        'year_range' => '-10:+3',
+        'year_range' => '1930:+10',
       ),
       'type' => 'date_popup',
       'weight' => 3,

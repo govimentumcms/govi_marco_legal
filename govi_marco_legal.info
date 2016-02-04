@@ -13,6 +13,7 @@ dependencies[] = file
 dependencies[] = link
 dependencies[] = list
 dependencies[] = menu
+dependencies[] = node
 dependencies[] = options
 dependencies[] = taxonomy
 dependencies[] = text
