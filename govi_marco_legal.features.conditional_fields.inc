@@ -18,11 +18,9 @@ function govi_marco_legal_conditional_fields_default_fields() {
     'options' => array(
       'state' => 'visible',
       'condition' => 'value',
-      'grouping' => 'AND',
-      'effect' => 'slide',
-      'effect_options' => array(
-        'speed' => 400,
-      ),
+      'grouping' => 'XOR',
+      'effect' => 'show',
+      'effect_options' => array(),
       'element_view' => array(
         1 => 1,
         2 => 2,
@@ -56,7 +54,7 @@ function govi_marco_legal_conditional_fields_default_fields() {
       ),
       'element_edit' => array(
         1 => 1,
-        3 => 0,
+        3 => 3,
       ),
       'element_edit_per_role' => 0,
       'element_edit_roles' => array(
@@ -93,11 +91,9 @@ function govi_marco_legal_conditional_fields_default_fields() {
     'options' => array(
       'state' => 'visible',
       'condition' => 'value',
-      'grouping' => 'AND',
-      'effect' => 'slide',
-      'effect_options' => array(
-        'speed' => 400,
-      ),
+      'grouping' => 'XOR',
+      'effect' => 'show',
+      'effect_options' => array(),
       'element_view' => array(
         1 => 1,
         2 => 2,
@@ -131,7 +127,7 @@ function govi_marco_legal_conditional_fields_default_fields() {
       ),
       'element_edit' => array(
         1 => 1,
-        3 => 0,
+        3 => 3,
       ),
       'element_edit_per_role' => 0,
       'element_edit_roles' => array(
