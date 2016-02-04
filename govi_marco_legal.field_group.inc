@@ -92,12 +92,14 @@ function govi_marco_legal_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Recurso',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-legal-recurso field-group-fieldset',
         'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-legal-recurso field-group-fieldset',
+        'description' => 'Este campo le permite referenciar el documento en el Sistema de Información del Régimen Legal -Sisjur- a través de un enlace. En caso de no existir referencia en el Sisjur puede habilitar la opción para subir un archivo adjunto. Recuerde que si ingresa información en ambas opciones la Distribución dará prioridad al enlace en la presentación de la sección del marco legal asociada al documento.',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $field_groups['group_legal_recurso|node|marco_legal|form'] = $field_group;
