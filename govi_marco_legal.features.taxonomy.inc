@@ -15,7 +15,7 @@ function govi_marco_legal_taxonomy_default_vocabularies() {
       'description' => 'Taxonomia que categoriza la clasificación general del marco legal que afecta a la Entidad',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -7,
+      'weight' => -9,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -38,7 +38,7 @@ function govi_marco_legal_taxonomy_default_vocabularies() {
       'description' => 'Clasificación de los lineamientos que afectan a la Entidad',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -5,
+      'weight' => -7,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -61,7 +61,7 @@ function govi_marco_legal_taxonomy_default_vocabularies() {
       'description' => 'Lista de terminos para categorizar las entidades o lugares de expedición de normas, lineamientos, planes y políticas',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -6,
+      'weight' => -8,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -84,7 +84,7 @@ function govi_marco_legal_taxonomy_default_vocabularies() {
       'description' => 'Lista de terminos para categorizar los tipos de documento del marco legal',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -4,
+      'weight' => -6,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
@@ -107,7 +107,7 @@ function govi_marco_legal_taxonomy_default_vocabularies() {
       'description' => 'Clasificación de los planes de desarrollo y proyectos de inversion',
       'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => -3,
+      'weight' => -5,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',
