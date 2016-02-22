@@ -28,6 +28,7 @@ function govi_marco_legal_context_default_contexts() {
     'path' => array(
       'values' => array(
         'marco-legal/*' => 'marco-legal/*',
+        'marco-legal' => 'marco-legal',
       ),
     ),
     'taxonomy_term' => array(

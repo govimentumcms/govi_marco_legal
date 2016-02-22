@@ -22,7 +22,7 @@ function govi_marco_legal_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Marco Legal Planes';
+  $handler->display->display_options['title'] = 'Marco Legal';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -300,9 +300,25 @@ En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: 
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
   $handler->display->display_options['path'] = 'marco-legal/planes';
+
+  /* Display: Marco Legal */
+  $handler = $view->new_display('page', 'Marco Legal', 'page_3');
+  $handler->display->display_options['display_description'] = 'Descripción Marco Legal';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.
+
+Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, enim non eleifend eleifend, justo mi pretium arcu, vitae tempor mauris velit vitae quam. Mauris nec ultrices urna, sed ullamcorper tellus. Suspendisse tempor suscipit pretium. Nullam laoreet pretium sem, eget scelerisque arcu malesuada eu. Proin mollis tristique sollicitudin. Quisque tempor consequat lacinia. Pellentesque venenatis sapien vel odio convallis, bibendum consectetur lorem faucibus. Pellentesque non nulla sem. Quisque porttitor enim id sollicitudin ultrices. Donec mauris eros, volutpat ornare laoreet a, dictum eu magna. Sed hendrerit, lorem eu bibendum congue, dolor dolor mollis felis, quis fringilla nunc neque a massa.
+
+In eu volutpat nisi. Pellentesque lacinia nec enim volutpat faucibus. Mauris rhoncus at urna sit amet lacinia. Proin sagittis ac purus at tempus. Etiam molestie tempor porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris luctus lacus libero, ut accumsan turpis tincidunt et. In urna neque, hendrerit ac tortor quis, tempus dignissim tellus. ';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
+  $handler->display->display_options['path'] = 'marco-legal';
   $translatables['marco_legal'] = array(
     t('Master'),
-    t('Marco Legal Planes'),
+    t('Marco Legal'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -332,10 +348,17 @@ En estra sección podrá encontrar la siguiene clasificación de <i>normatividad
 
 En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos</i>: Actas, Circulares, Conceptos.'),
     t('Planes'),
+    t('Marco Legal Planes'),
     t('Clasificación de los documentos que definen planes del marco legal de la entidad'),
     t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: Planes de desarrollo, Proyectos de inversión'),
+    t('Descripción Marco Legal'),
+    t(' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.
+
+Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, enim non eleifend eleifend, justo mi pretium arcu, vitae tempor mauris velit vitae quam. Mauris nec ultrices urna, sed ullamcorper tellus. Suspendisse tempor suscipit pretium. Nullam laoreet pretium sem, eget scelerisque arcu malesuada eu. Proin mollis tristique sollicitudin. Quisque tempor consequat lacinia. Pellentesque venenatis sapien vel odio convallis, bibendum consectetur lorem faucibus. Pellentesque non nulla sem. Quisque porttitor enim id sollicitudin ultrices. Donec mauris eros, volutpat ornare laoreet a, dictum eu magna. Sed hendrerit, lorem eu bibendum congue, dolor dolor mollis felis, quis fringilla nunc neque a massa.
+
+In eu volutpat nisi. Pellentesque lacinia nec enim volutpat faucibus. Mauris rhoncus at urna sit amet lacinia. Proin sagittis ac purus at tempus. Etiam molestie tempor porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris luctus lacus libero, ut accumsan turpis tincidunt et. In urna neque, hendrerit ac tortor quis, tempus dignissim tellus. '),
   );
   $export['marco_legal'] = $view;
 

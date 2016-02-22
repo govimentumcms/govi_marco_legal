@@ -12,6 +12,26 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;
+  $path_breadcrumb->machine_name = 'marco_legal';
+  $path_breadcrumb->name = 'Marco legal';
+  $path_breadcrumb->path = 'marco-legal';
+  $path_breadcrumb->data = array(
+    'titles' => array(
+      0 => 'Marco Legal',
+    ),
+    'paths' => array(
+      0 => '<none>',
+    ),
+    'home' => 1,
+    'translatable' => 0,
+    'arguments' => array(),
+    'access' => array(),
+  );
+  $path_breadcrumb->weight = 0;
+  $export['marco_legal'] = $path_breadcrumb;
+
+  $path_breadcrumb = new stdClass();
+  $path_breadcrumb->api_version = 1;
   $path_breadcrumb->machine_name = 'marco_legal_lineamientos';
   $path_breadcrumb->name = 'Marco Legal Lineamientos';
   $path_breadcrumb->path = 'node/%lineamientos';
@@ -22,7 +42,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       2 => '%lineamientos:title',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => 'marco-legal/lineamientos',
       2 => '<none>',
     ),
@@ -76,7 +96,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       1 => 'Lineamientos',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => '<none>',
     ),
     'home' => 1,
@@ -112,7 +132,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       2 => '%lineamientos:name',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => 'marco-legal/lineamientos',
       2 => '<none>',
     ),
@@ -200,7 +220,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       2 => '%normatividad:title',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => 'marco-legal/normatividad',
       2 => '<none>',
     ),
@@ -254,7 +274,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       1 => 'Normatividad',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => '<none>',
     ),
     'home' => 1,
@@ -277,7 +297,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       2 => '%normatividad:name',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => 'marco-legal/normatividad',
       2 => '<none>',
     ),
@@ -361,7 +381,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       2 => '%planes:title',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => 'marco-legal/planes',
       2 => '<none>',
     ),
@@ -415,7 +435,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       1 => 'Planes',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => '<none>',
     ),
     'home' => 1,
@@ -451,7 +471,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       2 => '%planes:name',
     ),
     'paths' => array(
-      0 => '<none>',
+      0 => 'marco-legal',
       1 => 'marco-legal/planes',
       2 => '<none>',
     ),

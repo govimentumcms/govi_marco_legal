@@ -55,6 +55,7 @@ features[menu_links][] = menu-menu-marco-legal_lineamientos:menutoken/568ff29656
 features[menu_links][] = menu-menu-marco-legal_normatividad:menutoken/568ff279ef393
 features[menu_links][] = menu-menu-marco-legal_planes:menutoken/568ff2b36ff87
 features[node][] = marco_legal
+features[path_breadcrumbs][] = marco_legal
 features[path_breadcrumbs][] = marco_legal_lineamientos
 features[path_breadcrumbs][] = marco_legal_lineamientos_home
 features[path_breadcrumbs][] = marco_legal_lineamientos_terminos
