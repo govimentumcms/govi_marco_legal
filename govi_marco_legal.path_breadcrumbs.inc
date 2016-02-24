@@ -14,20 +14,22 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->api_version = 1;
   $path_breadcrumb->machine_name = 'marco_legal';
   $path_breadcrumb->name = 'Marco legal';
-  $path_breadcrumb->path = 'marco-legal';
+  $path_breadcrumb->path = 'transparencia/marco-legal';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
     ),
     'paths' => array(
       0 => '<none>',
+      1 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
     'arguments' => array(),
     'access' => array(),
   );
-  $path_breadcrumb->weight = 0;
+  $path_breadcrumb->weight = -91;
   $export['marco_legal'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
@@ -37,14 +39,16 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->path = 'node/%lineamientos';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Lineamientos',
-      2 => '%lineamientos:title',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Lineamientos',
+      3 => '%lineamientos:title',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => 'marco-legal/lineamientos',
-      2 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => 'transparencia/marco-legal/lineamientos',
+      3 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -63,7 +67,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'marco-legal/lineamientos/*',
+            'paths' => 'transparencia/marco-legal/lineamientos/*',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -82,22 +86,24 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -96;
+  $path_breadcrumb->weight = -93;
   $export['marco_legal_lineamientos'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;
   $path_breadcrumb->machine_name = 'marco_legal_lineamientos_home';
   $path_breadcrumb->name = 'Marco Legal lineamientos home';
-  $path_breadcrumb->path = 'marco-legal/lineamientos';
+  $path_breadcrumb->path = 'transparencia/marco-legal/lineamientos';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Lineamientos',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Lineamientos',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -108,7 +114,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'marco-legal/lineamientos',
+            'paths' => 'transparencia/marco-legal/lineamientos',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -117,7 +123,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -100;
+  $path_breadcrumb->weight = -99;
   $export['marco_legal_lineamientos_home'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
@@ -127,14 +133,16 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->path = 'taxonomy/term/%lineamientos';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Lineamientos',
-      2 => '%lineamientos:name',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Lineamientos',
+      3 => '%lineamientos:name',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => 'marco-legal/lineamientos',
-      2 => '<none>',
+      0 => '<none>',
+      1 => 'trasnparencia/marco-legal',
+      2 => 'transparencia/marco-legal/lineamientos',
+      3 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -205,7 +213,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -98;
+  $path_breadcrumb->weight = -96;
   $export['marco_legal_lineamientos_terminos'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
@@ -215,14 +223,16 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->path = 'node/%normatividad';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Normatividad',
-      2 => '%normatividad:title',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Normatividad',
+      3 => '%normatividad:title',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => 'marco-legal/normatividad',
-      2 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => 'transparencia/marco-legal/normatividad',
+      3 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -241,7 +251,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'marco-legal/normatividad/*',
+            'paths' => 'transparencia/marco-legal/normatividad/*',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -260,22 +270,24 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -96;
+  $path_breadcrumb->weight = -92;
   $export['marco_legal_normatividad'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;
   $path_breadcrumb->machine_name = 'marco_legal_normatividad_home';
   $path_breadcrumb->name = 'Marco Legal normatividad home';
-  $path_breadcrumb->path = 'marco-legal/normatividad';
+  $path_breadcrumb->path = 'transparencia/marco-legal/normatividad';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Normatividad',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Normatividad',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -292,14 +304,16 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->path = 'taxonomy/term/%normatividad';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Normatividad',
-      2 => '%normatividad:name',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Normatividad',
+      3 => '%normatividad:name',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => 'marco-legal/normatividad',
-      2 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => 'transparencia/marco-legal/normatividad',
+      3 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -366,7 +380,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -98;
+  $path_breadcrumb->weight = -97;
   $export['marco_legal_normatividad_terminos'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
@@ -376,14 +390,16 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->path = 'node/%planes';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Planes',
-      2 => '%planes:title',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Planes',
+      3 => '%planes:title',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => 'marco-legal/planes',
-      2 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => 'transparencia/marco-legal/planes',
+      3 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -402,7 +418,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'marco-legal/planes/*',
+            'paths' => 'transparencia/marco-legal/planes/*',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -421,22 +437,24 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -96;
+  $path_breadcrumb->weight = -94;
   $export['marco_legal_planes'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
   $path_breadcrumb->api_version = 1;
   $path_breadcrumb->machine_name = 'marco_legal_planes_home';
   $path_breadcrumb->name = 'Marco Legal planes home';
-  $path_breadcrumb->path = 'marco-legal/planes';
+  $path_breadcrumb->path = 'transparencia/marco-legal/planes';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Planes',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Planes',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -447,7 +465,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
           'name' => 'path_visibility',
           'settings' => array(
             'visibility_setting' => '1',
-            'paths' => 'marco-legal/planes',
+            'paths' => 'transparencia/marco-legal/planes',
           ),
           'context' => 'empty',
           'not' => FALSE,
@@ -456,7 +474,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -100;
+  $path_breadcrumb->weight = -98;
   $export['marco_legal_planes_home'] = $path_breadcrumb;
 
   $path_breadcrumb = new stdClass();
@@ -466,14 +484,16 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
   $path_breadcrumb->path = 'taxonomy/term/%planes';
   $path_breadcrumb->data = array(
     'titles' => array(
-      0 => 'Marco Legal',
-      1 => 'Planes',
-      2 => '%planes:name',
+      0 => 'Transparencia',
+      1 => 'Marco Legal',
+      2 => 'Planes',
+      3 => '%planes:name',
     ),
     'paths' => array(
-      0 => 'marco-legal',
-      1 => 'marco-legal/planes',
-      2 => '<none>',
+      0 => '<none>',
+      1 => 'transparencia/marco-legal',
+      2 => 'transparencia/marco-legal/planes',
+      3 => '<none>',
     ),
     'home' => 1,
     'translatable' => 0,
@@ -547,7 +567,7 @@ function govi_marco_legal_path_breadcrumbs_settings_info() {
       'logic' => 'and',
     ),
   );
-  $path_breadcrumb->weight = -98;
+  $path_breadcrumb->weight = -95;
   $export['marco_legal_planes_terminos'] = $path_breadcrumb;
 
   return $export;

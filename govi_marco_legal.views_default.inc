@@ -215,7 +215,7 @@ En estra sección podrá encontrar la siguiene clasificación de <i>normatividad
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
-  $handler->display->display_options['path'] = 'marco-legal/normatividad';
+  $handler->display->display_options['path'] = 'transparencia/marco-legal/normatividad';
 
   /* Display: Lineamientos */
   $handler = $view->new_display('page', 'Lineamientos', 'page_1');
@@ -244,7 +244,7 @@ En estra sección podrá encontrar la siguiene clasificación de <i>normatividad
 
 En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos</i>: Actas, Circulares, Conceptos.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['path'] = 'marco-legal/lineamientos';
+  $handler->display->display_options['path'] = 'transparencia/marco-legal/lineamientos';
 
   /* Display: Planes */
   $handler = $view->new_display('page', 'Planes', 'page_2');
@@ -299,10 +299,12 @@ En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: 
   );
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
-  $handler->display->display_options['path'] = 'marco-legal/planes';
+  $handler->display->display_options['path'] = 'transparencia/marco-legal/planes';
 
   /* Display: Marco Legal */
   $handler = $view->new_display('page', 'Marco Legal', 'page_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Marco Legal';
   $handler->display->display_options['display_description'] = 'Descripción Marco Legal';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Header: Global: Text area */
@@ -315,7 +317,7 @@ Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, en
 
 In eu volutpat nisi. Pellentesque lacinia nec enim volutpat faucibus. Mauris rhoncus at urna sit amet lacinia. Proin sagittis ac purus at tempus. Etiam molestie tempor porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris luctus lacus libero, ut accumsan turpis tincidunt et. In urna neque, hendrerit ac tortor quis, tempus dignissim tellus. ';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['path'] = 'marco-legal';
+  $handler->display->display_options['path'] = 'transparencia/marco-legal';
   $translatables['marco_legal'] = array(
     t('Master'),
     t('Marco Legal'),

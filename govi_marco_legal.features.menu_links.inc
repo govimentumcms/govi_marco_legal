@@ -10,26 +10,28 @@
 function govi_marco_legal_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: menu-menu-marco-legal_lineamientos:menutoken/568ff29656ea8.
-  $menu_links['menu-menu-marco-legal_lineamientos:menutoken/568ff29656ea8'] = array(
+  // Exported menu link: menu-menu-marco-legal_lineamientos:transparencia/marco-legal/lineamientos.
+  $menu_links['menu-menu-marco-legal_lineamientos:transparencia/marco-legal/lineamientos'] = array(
     'menu_name' => 'menu-menu-marco-legal',
-    'link_path' => 'menutoken/568ff29656ea8',
-    'router_path' => 'menutoken/%',
+    'link_path' => 'transparencia/marco-legal/lineamientos',
+    'router_path' => 'transparencia/marco-legal/lineamientos',
     'link_title' => 'Lineamientos',
     'options' => array(
+      'cami' => array(
+        'pages' => 'transparencia/marco-legal/lineamientos
+transparencia/marco-legal/lineamientos/*',
+      ),
       'attributes' => array(),
       'item_attributes' => array(
+        'data-inner-width' => '',
+        'data-inner-height' => '',
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'menu_token_link_path' => '[site:url]marco-legal/lineamientos',
-      'menu_token_data' => array(),
-      'menu_token_options' => array(
-        'clear' => 0,
-      ),
       'alter' => TRUE,
-      'identifier' => 'menu-menu-marco-legal_lineamientos:menutoken/568ff29656ea8',
+      'identifier' => 'menu-menu-marco-legal_lineamientos:transparencia/marco-legal/lineamientos',
+      'menu_token_link_uuid' => 'menutoken/568ff29656ea8',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -39,26 +41,28 @@ function govi_marco_legal_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-marco-legal_normatividad:menutoken/568ff279ef393.
-  $menu_links['menu-menu-marco-legal_normatividad:menutoken/568ff279ef393'] = array(
+  // Exported menu link: menu-menu-marco-legal_normatividad:transparencia/marco-legal/normatividad.
+  $menu_links['menu-menu-marco-legal_normatividad:transparencia/marco-legal/normatividad'] = array(
     'menu_name' => 'menu-menu-marco-legal',
-    'link_path' => 'menutoken/568ff279ef393',
-    'router_path' => 'menutoken/%',
+    'link_path' => 'transparencia/marco-legal/normatividad',
+    'router_path' => 'transparencia/marco-legal/normatividad',
     'link_title' => 'Normatividad',
     'options' => array(
+      'cami' => array(
+        'pages' => 'transparencia/marco-legal/normatividad
+transparencia/marco-legal/normatividad/*',
+      ),
       'attributes' => array(),
       'item_attributes' => array(
+        'data-inner-width' => '',
+        'data-inner-height' => '',
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'menu_token_link_path' => '[site:url]marco-legal/normatividad',
-      'menu_token_data' => array(),
-      'menu_token_options' => array(
-        'clear' => 0,
-      ),
       'alter' => TRUE,
-      'identifier' => 'menu-menu-marco-legal_normatividad:menutoken/568ff279ef393',
+      'identifier' => 'menu-menu-marco-legal_normatividad:transparencia/marco-legal/normatividad',
+      'menu_token_link_uuid' => 'menutoken/568ff279ef393',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -68,26 +72,28 @@ function govi_marco_legal_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-marco-legal_planes:menutoken/568ff2b36ff87.
-  $menu_links['menu-menu-marco-legal_planes:menutoken/568ff2b36ff87'] = array(
+  // Exported menu link: menu-menu-marco-legal_planes:transparencia/marco-legal/planes.
+  $menu_links['menu-menu-marco-legal_planes:transparencia/marco-legal/planes'] = array(
     'menu_name' => 'menu-menu-marco-legal',
-    'link_path' => 'menutoken/568ff2b36ff87',
-    'router_path' => 'menutoken/%',
+    'link_path' => 'transparencia/marco-legal/planes',
+    'router_path' => 'transparencia/marco-legal/planes',
     'link_title' => 'Planes',
     'options' => array(
+      'cami' => array(
+        'pages' => 'transparencia/marco-legal/planes
+transparencia/marco-legal/planes/*',
+      ),
       'attributes' => array(),
       'item_attributes' => array(
+        'data-inner-width' => '',
+        'data-inner-height' => '',
         'id' => '',
         'class' => '',
         'style' => '',
       ),
-      'menu_token_link_path' => '[site:url]marco-legal/planes',
-      'menu_token_data' => array(),
-      'menu_token_options' => array(
-        'clear' => 0,
-      ),
       'alter' => TRUE,
-      'identifier' => 'menu-menu-marco-legal_planes:menutoken/568ff2b36ff87',
+      'identifier' => 'menu-menu-marco-legal_planes:transparencia/marco-legal/planes',
+      'menu_token_link_uuid' => 'menutoken/568ff2b36ff87',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -95,6 +101,36 @@ function govi_marco_legal_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
+    'customized' => 1,
+  );
+  // Exported menu link: menu-menu-organizacion_visin:transparencia/organizacion.
+  $menu_links['menu-menu-organizacion_visin:transparencia/organizacion'] = array(
+    'menu_name' => 'menu-menu-organizacion',
+    'link_path' => 'transparencia/organizacion',
+    'router_path' => 'transparencia/organizacion',
+    'link_title' => 'Visión',
+    'options' => array(
+      'cami' => array(
+        'pages' => '',
+      ),
+      'attributes' => array(),
+      'item_attributes' => array(
+        'data-inner-width' => '',
+        'data-inner-height' => '',
+        'id' => '',
+        'class' => '',
+        'style' => '',
+      ),
+      'identifier' => 'menu-menu-organizacion_visin:transparencia/organizacion',
+      'alter' => TRUE,
+      'menu_token_link_uuid' => 'menutoken/5670a2132fc92',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -49,
     'customized' => 1,
   );
 
@@ -103,6 +139,7 @@ function govi_marco_legal_menu_default_menu_links() {
   t('Lineamientos');
   t('Normatividad');
   t('Planes');
+  t('Visión');
 
   return $menu_links;
 }
