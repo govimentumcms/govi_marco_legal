@@ -103,43 +103,12 @@ transparencia/marco-legal/planes/*',
     'weight' => 0,
     'customized' => 1,
   );
-  // Exported menu link: menu-menu-organizacion_visin:transparencia/organizacion.
-  $menu_links['menu-menu-organizacion_visin:transparencia/organizacion'] = array(
-    'menu_name' => 'menu-menu-organizacion',
-    'link_path' => 'transparencia/organizacion',
-    'router_path' => 'transparencia/organizacion',
-    'link_title' => 'Visión',
-    'options' => array(
-      'cami' => array(
-        'pages' => '',
-      ),
-      'attributes' => array(),
-      'item_attributes' => array(
-        'data-inner-width' => '',
-        'data-inner-height' => '',
-        'id' => '',
-        'class' => '',
-        'style' => '',
-      ),
-      'identifier' => 'menu-menu-organizacion_visin:transparencia/organizacion',
-      'alter' => TRUE,
-      'menu_token_link_uuid' => 'menutoken/5670a2132fc92',
-    ),
-    'module' => 'menu',
-    'hidden' => 0,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -49,
-    'customized' => 1,
-  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Lineamientos');
   t('Normatividad');
   t('Planes');
-  t('Visión');
 
   return $menu_links;
 }

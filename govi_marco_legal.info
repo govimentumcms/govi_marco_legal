@@ -55,7 +55,6 @@ features[menu_custom][] = menu-menu-marco-legal
 features[menu_links][] = menu-menu-marco-legal_lineamientos:transparencia/marco-legal/lineamientos
 features[menu_links][] = menu-menu-marco-legal_normatividad:transparencia/marco-legal/normatividad
 features[menu_links][] = menu-menu-marco-legal_planes:transparencia/marco-legal/planes
-features[menu_links][] = menu-menu-organizacion_visin:transparencia/organizacion
 features[node][] = marco_legal
 features[path_breadcrumbs][] = marco_legal
 features[path_breadcrumbs][] = marco_legal_lineamientos
