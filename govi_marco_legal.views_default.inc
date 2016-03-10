@@ -185,33 +185,11 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>normatividad</i>: Acuerdos distritales, Decretos, Directivas, Jurisprudencia, Leyes, Normas constitucionales, Resoluciones y Tratados internacionales.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Tipos de normatividad (field_legal_normatividad) */
-  $handler->display->display_options['relationships']['field_legal_normatividad_tid']['id'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['relationships']['field_legal_normatividad_tid']['table'] = 'field_data_field_legal_normatividad';
-  $handler->display->display_options['relationships']['field_legal_normatividad_tid']['field'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['relationships']['field_legal_normatividad_tid']['required'] = TRUE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  /* Sort criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['sorts']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['sorts']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['sorts']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['sorts']['uuid']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'OR',
-  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -228,55 +206,15 @@ En estra sección podrá encontrar la siguiene clasificación de <i>normatividad
     'marco_legal' => 'marco_legal',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_6']['id'] = 'uuid_6';
-  $handler->display->display_options['filters']['uuid_6']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_6']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_6']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid_6']['value'] = 'f640afde-1318-4260-81b2-04d8f10ba71f';
-  $handler->display->display_options['filters']['uuid_6']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_5']['id'] = 'uuid_5';
-  $handler->display->display_options['filters']['uuid_5']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_5']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_5']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid_5']['value'] = 'acdf8029-3924-4c27-8269-c0f6eeda979b';
-  $handler->display->display_options['filters']['uuid_5']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_4']['id'] = 'uuid_4';
-  $handler->display->display_options['filters']['uuid_4']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_4']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_4']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid_4']['value'] = '5f09088b-b483-451f-8534-0ac4ba13f19f';
-  $handler->display->display_options['filters']['uuid_4']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_3']['id'] = 'uuid_3';
-  $handler->display->display_options['filters']['uuid_3']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_3']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_3']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid_3']['value'] = '5c651eee-b004-4074-9cd6-eb30ea4e6b23';
-  $handler->display->display_options['filters']['uuid_3']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_2']['id'] = 'uuid_2';
-  $handler->display->display_options['filters']['uuid_2']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_2']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_2']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid_2']['value'] = '287aa1b4-9a6a-4a87-a454-500fa1b23bd9';
-  $handler->display->display_options['filters']['uuid_2']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid']['value'] = '2b6758bd-41c6-4ae6-8843-4ffaa3419084';
-  $handler->display->display_options['filters']['uuid']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_1']['id'] = 'uuid_1';
-  $handler->display->display_options['filters']['uuid_1']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_1']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_1']['relationship'] = 'field_legal_normatividad_tid';
-  $handler->display->display_options['filters']['uuid_1']['value'] = '12076149-f9eb-4e7e-a1f0-da8a7d462d5a';
-  $handler->display->display_options['filters']['uuid_1']['group'] = 2;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    14 => '14',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/marco-legal/normatividad';
 
   /* Display: Lineamientos */
@@ -302,58 +240,10 @@ En estra sección podrá encontrar la siguiene clasificación de <i>normatividad
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos</i>: Actas, Circulares, Conceptos.';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Tipos de lineamientos (field_legal_lineamientos) */
-  $handler->display->display_options['relationships']['field_legal_lineamientos_tid']['id'] = 'field_legal_lineamientos_tid';
-  $handler->display->display_options['relationships']['field_legal_lineamientos_tid']['table'] = 'field_data_field_legal_lineamientos';
-  $handler->display->display_options['relationships']['field_legal_lineamientos_tid']['field'] = 'field_legal_lineamientos_tid';
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'OR',
-  );
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'marco_legal' => 'marco_legal',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_legal_lineamientos_tid';
-  $handler->display->display_options['filters']['uuid']['value'] = '454b9614-dc51-4ef0-ba03-f2de8739f7be';
-  $handler->display->display_options['filters']['uuid']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_2']['id'] = 'uuid_2';
-  $handler->display->display_options['filters']['uuid_2']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_2']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_2']['relationship'] = 'field_legal_lineamientos_tid';
-  $handler->display->display_options['filters']['uuid_2']['value'] = '5546884b-883e-4432-abeb-e8fc2ffdcfe8';
-  $handler->display->display_options['filters']['uuid_2']['group'] = 2;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid_1']['id'] = 'uuid_1';
-  $handler->display->display_options['filters']['uuid_1']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid_1']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid_1']['relationship'] = 'field_legal_lineamientos_tid';
-  $handler->display->display_options['filters']['uuid_1']['value'] = '51ae634d-9241-4a52-8a42-fa583eff2c43';
-  $handler->display->display_options['filters']['uuid_1']['group'] = 2;
   $handler->display->display_options['path'] = 'transparencia/marco-legal/lineamientos';
 
   /* Display: Planes */
@@ -379,22 +269,11 @@ En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = 'Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: Planes de desarrollo, Proyectos de inversión';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Tipos de planes (field_legal_planes) */
-  $handler->display->display_options['relationships']['field_legal_planes_tid']['id'] = 'field_legal_planes_tid';
-  $handler->display->display_options['relationships']['field_legal_planes_tid']['table'] = 'field_data_field_legal_planes';
-  $handler->display->display_options['relationships']['field_legal_planes_tid']['field'] = 'field_legal_planes_tid';
-  $handler->display->display_options['relationships']['field_legal_planes_tid']['required'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'OR',
-  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -411,13 +290,15 @@ En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: 
     'marco_legal' => 'marco_legal',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Taxonomy term UUID */
-  $handler->display->display_options['filters']['uuid']['id'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['uuid']['field'] = 'uuid';
-  $handler->display->display_options['filters']['uuid']['relationship'] = 'field_legal_planes_tid';
-  $handler->display->display_options['filters']['uuid']['value'] = 'b0eae8e3-1a98-4fdf-883e-cba67576e635';
-  $handler->display->display_options['filters']['uuid']['group'] = 2;
+  /* Filter criterion: Content: Has taxonomy term */
+  $handler->display->display_options['filters']['tid']['id'] = 'tid';
+  $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['filters']['tid']['field'] = 'tid';
+  $handler->display->display_options['filters']['tid']['value'] = array(
+    16 => '16',
+  );
+  $handler->display->display_options['filters']['tid']['type'] = 'select';
+  $handler->display->display_options['filters']['tid']['vocabulary'] = 'marco_legal_clasificacion';
   $handler->display->display_options['path'] = 'transparencia/marco-legal/planes';
 
   /* Display: Marco Legal */
@@ -430,35 +311,12 @@ En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: 
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.';
+  $handler->display->display_options['header']['area']['content'] = ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.
+
+Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, enim non eleifend eleifend, justo mi pretium arcu, vitae tempor mauris velit vitae quam. Mauris nec ultrices urna, sed ullamcorper tellus. Suspendisse tempor suscipit pretium. Nullam laoreet pretium sem, eget scelerisque arcu malesuada eu. Proin mollis tristique sollicitudin. Quisque tempor consequat lacinia. Pellentesque venenatis sapien vel odio convallis, bibendum consectetur lorem faucibus. Pellentesque non nulla sem. Quisque porttitor enim id sollicitudin ultrices. Donec mauris eros, volutpat ornare laoreet a, dictum eu magna. Sed hendrerit, lorem eu bibendum congue, dolor dolor mollis felis, quis fringilla nunc neque a massa.
+
+In eu volutpat nisi. Pellentesque lacinia nec enim volutpat faucibus. Mauris rhoncus at urna sit amet lacinia. Proin sagittis ac purus at tempus. Etiam molestie tempor porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris luctus lacus libero, ut accumsan turpis tincidunt et. In urna neque, hendrerit ac tortor quis, tempus dignissim tellus. ';
   $handler->display->display_options['header']['area']['format'] = 'filtered_html';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Nombre';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'marco_legal' => 'marco_legal',
-  );
-  $handler->display->display_options['filters']['type']['group'] = 1;
   $handler->display->display_options['path'] = 'transparencia/marco-legal';
   $translatables['marco_legal'] = array(
     t('Master'),
@@ -485,23 +343,24 @@ En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: 
     t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>normatividad</i>: Acuerdos distritales, Decretos, Directivas, Jurisprudencia, Leyes, Normas constitucionales, Resoluciones y Tratados internacionales.'),
-    t('term from field_legal_normatividad'),
     t('Lineamientos'),
     t('Marco Legal Lineamientos'),
     t('Clasificación de los documentos que definen lineamientos del marco legal'),
     t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>lineamientos</i>: Actas, Circulares, Conceptos.'),
-    t('term from field_legal_lineamientos'),
     t('Planes'),
     t('Marco Legal Planes'),
     t('Clasificación de los documentos que definen planes del marco legal de la entidad'),
     t('Esta sección presenta la normatividad que rige a la Entidad, la que determina su competencia y la que es aplicable a su actividad o producida por la misma. De igual forma se deben publicar las políticas, manuales o lineamientos que produzca la Entidad. Este criterio aplica a sitios web adicionales según el contexto del propósito del sitio web (en este caso es válido hacer el enlace al sitio web principal, siempre y cuando sea clara la relación de la norma con la temática desarrollada por el sitio web adicional).
 
 En estra sección podrá encontrar la siguiene clasificación de <i>planes</i>: Planes de desarrollo, Proyectos de inversión'),
-    t('term from field_legal_planes'),
     t('Descripción Marco Legal'),
-    t(' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.'),
+    t(' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh ipsum, porta non vulputate a, egestas ac urna. Ut laoreet dapibus dolor, ac imperdiet purus rhoncus ut. Cras id cursus diam. Nunc auctor ultrices lectus eget ultricies. Etiam at neque felis. Quisque vel tortor sed lectus hendrerit eleifend. Suspendisse velit libero, placerat eleifend cursus eu, condimentum non dolor. Duis nulla purus, tempus eu ultrices ac, venenatis eget leo. Curabitur mi dui, posuere sed leo sed, blandit feugiat justo. Cras semper commodo orci sagittis suscipit.
+
+Donec sed orci tincidunt, dapibus quam vel, ultricies arcu. Phasellus semper, enim non eleifend eleifend, justo mi pretium arcu, vitae tempor mauris velit vitae quam. Mauris nec ultrices urna, sed ullamcorper tellus. Suspendisse tempor suscipit pretium. Nullam laoreet pretium sem, eget scelerisque arcu malesuada eu. Proin mollis tristique sollicitudin. Quisque tempor consequat lacinia. Pellentesque venenatis sapien vel odio convallis, bibendum consectetur lorem faucibus. Pellentesque non nulla sem. Quisque porttitor enim id sollicitudin ultrices. Donec mauris eros, volutpat ornare laoreet a, dictum eu magna. Sed hendrerit, lorem eu bibendum congue, dolor dolor mollis felis, quis fringilla nunc neque a massa.
+
+In eu volutpat nisi. Pellentesque lacinia nec enim volutpat faucibus. Mauris rhoncus at urna sit amet lacinia. Proin sagittis ac purus at tempus. Etiam molestie tempor porta. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris luctus lacus libero, ut accumsan turpis tincidunt et. In urna neque, hendrerit ac tortor quis, tempus dignissim tellus. '),
   );
   $export['marco_legal'] = $view;
 
