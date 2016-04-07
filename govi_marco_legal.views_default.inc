@@ -87,6 +87,7 @@ function govi_marco_legal_views_default_views() {
   $handler->display->display_options['fields']['field_legal_adjunto']['alter']['path'] = '[field_legal_adjunto]';
   $handler->display->display_options['fields']['field_legal_adjunto']['alter']['alt'] = 'Descargar documento';
   $handler->display->display_options['fields']['field_legal_adjunto']['alter']['link_class'] = 'pure-button';
+  $handler->display->display_options['fields']['field_legal_adjunto']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['field_legal_adjunto']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_legal_adjunto']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_legal_adjunto']['click_sort_column'] = 'fid';

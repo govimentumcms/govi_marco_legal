@@ -14,7 +14,7 @@ function govi_marco_legal_menu_default_menu_links() {
   $menu_links['menu-menu-marco-legal_lineamientos:transparencia/marco-legal/lineamientos'] = array(
     'menu_name' => 'menu-menu-marco-legal',
     'link_path' => 'transparencia/marco-legal/lineamientos',
-    'router_path' => 'transparencia/marco-legal/lineamientos',
+    'router_path' => 'transparencia',
     'link_title' => 'Lineamientos',
     'options' => array(
       'cami' => array(
@@ -45,7 +45,7 @@ transparencia/marco-legal/lineamientos/*',
   $menu_links['menu-menu-marco-legal_normatividad:transparencia/marco-legal/normatividad'] = array(
     'menu_name' => 'menu-menu-marco-legal',
     'link_path' => 'transparencia/marco-legal/normatividad',
-    'router_path' => 'transparencia/marco-legal/normatividad',
+    'router_path' => 'transparencia',
     'link_title' => 'Normatividad',
     'options' => array(
       'cami' => array(
@@ -76,7 +76,7 @@ transparencia/marco-legal/normatividad/*',
   $menu_links['menu-menu-marco-legal_planes:transparencia/marco-legal/planes'] = array(
     'menu_name' => 'menu-menu-marco-legal',
     'link_path' => 'transparencia/marco-legal/planes',
-    'router_path' => 'transparencia/marco-legal/planes',
+    'router_path' => 'transparencia',
     'link_title' => 'Planes',
     'options' => array(
       'cami' => array(
