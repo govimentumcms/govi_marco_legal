@@ -32,9 +32,9 @@ function govi_marco_legal_views_api($module = NULL, $api = NULL) {
 function govi_marco_legal_node_info() {
   $items = array(
     'marco_legal' => array(
-      'name' => t('Marco Legal'),
+      'name' => t('4. Normatividad'),
       'base' => 'node_content',
-      'description' => t('Utilice este tipo de contenido para gestionar y clasificar los documentos y enlaces del marco legal que afecta a la Entidad'),
+      'description' => t('Con este tipo de contenido puede gestionar la normatividad del orden territorial que rige a la Entidad.'),
       'has_title' => '1',
       'title_label' => t('Nombre'),
       'help' => '',
